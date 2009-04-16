@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response version="3"><status><code>0</code><message>Success</message></status><query><parameter name="api_key">CREDOYO7GFJ9OW3TV</parameter><parameter name="query">wavves</parameter><parameter name="sounds_like">Y</parameter><parameter name="exact">N</parameter></query><artists><artist><id>music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB</id><name>Wavves</name></artist></artists></response>

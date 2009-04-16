@@ -1,0 +1,13 @@
+@milestone Basic artist methods
+  @iteration Artist Search 
+  @iteration get_audio
+  get_blogs
+  get_familiarity
+  get_hottness
+  get_news
+  get_profile
+  get_reviews
+  get_similar
+  get_top_terms
+  get_urls
+  get_video

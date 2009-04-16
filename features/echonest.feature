@@ -1,9 +1,8 @@
-Feature: something something
-  In order to something something
-  A user something something
-  something something something
+Feature: Artist search
+  In order to access artist info
+  A user should be able to search for an artist and get a list of matching artist ids
 
-  Scenario: something something
-    Given inspiration
-    When I create a sweet new gem
-    Then everyone should see how awesome I am
+  Scenario: Artist search
+    When I search for "Wavves"
+    Then I should get some search results
+    And the top result should have id "..."
