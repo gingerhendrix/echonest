@@ -5,4 +5,4 @@ Feature: Artist search
   Scenario: Artist search
     When I search for "Wavves"
     Then I should get some search results
-    And the top result should have id "..."
+    And the top result should have id "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"

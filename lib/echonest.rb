@@ -1,7 +1,15 @@
 
 require 'happymapper'
+require 'open-uri'
 
 module EchoNest
+   def self.api_key=(api_key)
+    @api_key = api_key
+   end  
+   
+   def self.api_key
+    @api_key
+   end  
 
 end
 

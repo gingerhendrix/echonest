@@ -3,6 +3,8 @@ require 'echonest'
 
 require 'spec/expectations'
 
+EchoNest.api_key = "CREDOYO7GFJ9OW3TV"
+
 World do |world|
   
   world
