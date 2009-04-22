@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "echonest"
-    gem.summary = %Q{TODO}
+    gem.summary = "A ruby ribrary for accessing the echonest api"
     gem.email = "gingerhendrix@hotmail.com"
     gem.homepage = "http://github.com/gingerhendrix/echonest"
     gem.authors = ["Gareth Andrew"]
