@@ -1,6 +1,9 @@
 @milestone Basic artist methods
-  @iteration Artist Search 
+  @iteration Artist Search +done
   @iteration get_audio
+    acceptance test +done
+    unit tests
+    implementation
   get_blogs
   get_familiarity
   get_hottness
