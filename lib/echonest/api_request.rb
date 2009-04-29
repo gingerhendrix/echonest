@@ -18,7 +18,7 @@ module EchoNest
     private
     
     def query_string(options)
-      options.keys.map { |key| "#{key.to_s}=#{options[key]}" }.join('&')
+      options.keys.map { |key| "#{key.to_s}=#{URI.encode(options[key].to_s)}" }.join('&')
     end
   
   end

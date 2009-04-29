@@ -28,4 +28,11 @@ describe "ApiRequest" do
     
   end
   
+  describe "uri " do
+    it "should encode spaces" do
+     @uri = EchoNest::ApiRequest.new("artist_search", :query => "Built to Spill").uri    
+     @uri.should be_include("query=Built%20to%20Spill");
+    end
+  end
+  
 end
