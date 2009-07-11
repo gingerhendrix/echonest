@@ -32,3 +32,17 @@ Then /^I should get some audio results$/ do
   @audio.results.docs[0].url.should_not be_nil
 end
 
+When /^I retrieve the blogs for "([^\"]*)"$/ do |arg1|
+  @artist = Artist.new id
+  @blogs = @artist.get_blogs
+end
+
+Then /^I should get some blog results$/ do
+  @blogs.should_not be_nil
+  @blogs.should be_kind_of(Blog)
+  @blogs.results.blogs.should be_kind_of(Array)
+  @audio.results.docs.length.should > 0
+  @audio.results.docs[0].should be_kind_of(AudioDoc)
+  @audio.results.docs[0].url.should_not be_nil
+end
+

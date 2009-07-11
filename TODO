@@ -1,10 +1,26 @@
 @milestone Basic artist methods
   @iteration Artist Search +done
-  @iteration get_audio
+  @iteration get_audio +done
     acceptance test +done
-    unit tests
-    implementation
-  get_blogs
+    unit tests +done
+    implementation +done
+  @iteration write_generator
+    Write get_blogs and extract into generator
+      acceptance test +done
+        write +done
+        add to generator test +done
+        add to generator +done
+        extract into template +done
+      unit tests
+        write
+        add to generator test
+        add to generator
+        extract into template
+      implementation
+        write
+        add to generator test
+        add to generator
+        extract into template
   get_familiarity
   get_hottness
   get_news

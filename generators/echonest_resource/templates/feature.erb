@@ -1,0 +1,8 @@
+Feature: Artist <%= name %>
+  In order to find <%= name %> about an an artist
+  A user should be able to retrieve <%= name %> for an artist
+
+  Scenario: Artist <%= name %>
+    When I retrieve the <%= name %> for "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"
+    Then I should get some <%= name %> results
+
