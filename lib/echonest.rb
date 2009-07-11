@@ -22,4 +22,4 @@ require "echonest/audio_result.rb"
 require "echonest/blog_doc.rb"
 require "echonest/blog_results.rb"
 require "echonest/blog_result.rb"
-
+require "echonest/familiarity_result.rb"

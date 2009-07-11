@@ -5,7 +5,7 @@ describe "FamiliarityResult" do
   describe "#parse" do
     
     before(:each) do
-      @xml =  File.read(File.dirname(__FILE__) + "/../fixtures/familiarity/wavves.xml")
+      @xml =  File.read(File.dirname(__FILE__) + "/../fixtures/familiarity/radiohead.xml")
     end
     
     it "should parse xml" do
@@ -15,29 +15,18 @@ describe "FamiliarityResult" do
     it "should have artist" do
       familiarity = EchoNest::FamiliarityResult.parse(@xml)
       familiarity.artist.should be_kind_of(EchoNest::Artist)
-      familiarity.artist.name.should == "Wavves"
-      familiarity.artist.id.should == "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"      
+      familiarity.artist.name.should == "Radiohead"
+      familiarity.artist.id.should == "music://id.echonest.com/~/AR/ARH6W4X1187B99274F"      
     end
     
-    it "should have results" do
+    it " artist should have familiarity" do
       familiarity = EchoNest::FamiliarityResult.parse(@xml)
-      familiarity.results.should be_kind_of(EchoNest::BlogResults)
-      #TODO: Fill in these values as found in fixture
-      familiarity.results.found.should == "51"
-      familiarity.results.shown.should == "15"
-      familiarity.results.start.should == "0"
-      familiarity.results.docs.should be_kind_of(Array)
-      familiarity.results.docs.length.should == 15
+      familiarity.artist.should be_kind_of(EchoNest::Artist)
+      familiarity.artist.familiarity.should_not be_nil
+      familiarity.artist.familiarity.should == 0.96974159665
     end
+
     
-    describe "result" do
-      it "should be an FamiliarityDoc" do
-        familiarity = EchoNest::AudioResult.parse(@xml)
-        doc = audio.results.docs[0]  
-        doc.should be_kind_of(EchoNest::FamiliarityDoc)
-        #TODO: Create tests based on attributes in resource
-      end
-    end
   end    
 
 

@@ -21,12 +21,12 @@
         add to generator test +done
         add to generator +done
         extract into template +done
-  @iteration  get_familiarity
-    Run resource generator
-    Write acceptance tests 
-    Create fixture
-    Write unit tests
-    Write model
+  @iteration  get_familiarity +done
+    Run resource generator +done
+    Write acceptance tests +done
+    Create fixture +done
+    Write unit tests +done
+    Write model +done
   get_hottness
   get_news
   get_profile

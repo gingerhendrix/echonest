@@ -6,7 +6,6 @@ module EchoNest
     tag :response
     
     has_one :artist, Artist
-    has_one :results, FamiliarityResults
     
   end
 end
