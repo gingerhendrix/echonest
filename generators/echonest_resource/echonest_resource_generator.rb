@@ -14,9 +14,9 @@ class EchonestResourceGenerator < RubiGen::Base
   def manifest
     record do |m|
       # Ensure appropriate folder(s) exists
-      m.dependency "acceptance_test", [name]
-      m.dependency "unit_test", [name]
-      m.dependency "model", [name]
+      m.dependency "echonest_acceptance_test", [name]
+      m.dependency "echonest_unit_test", [name]
+      m.dependency "echonest_model", [name]
     end
   end
 
