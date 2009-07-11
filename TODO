@@ -4,24 +4,29 @@
     acceptance test +done
     unit tests +done
     implementation +done
-  @iteration write_generator
-    Write get_blogs and extract into generator
+  @iteration write_generator +done
+    Write get_blogs and extract into generator +done
       acceptance test +done
         write +done
         add to generator test +done
         add to generator +done
         extract into template +done
-      unit tests
-        write
-        add to generator test
-        add to generator
-        extract into template
-      implementation
-        write
-        add to generator test
-        add to generator
-        extract into template
-  get_familiarity
+      unit tests +done
+        write +done
+        add to generator test +done
+        add to generator +done
+        extract into template +done
+      model +done
+        write +done
+        add to generator test +done
+        add to generator +done
+        extract into template +done
+  @iteration  get_familiarity
+    Run resource generator
+    Write acceptance tests 
+    Create fixture
+    Write unit tests
+    Write model
   get_hottness
   get_news
   get_profile
