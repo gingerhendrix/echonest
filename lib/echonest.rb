@@ -19,4 +19,7 @@ require "echonest/artist_search.rb"
 require "echonest/audio_doc.rb"
 require "echonest/audio_results.rb"
 require "echonest/audio_result.rb"
+require "echonest/blog_doc.rb"
+require "echonest/blog_results.rb"
+require "echonest/blog_result.rb"
 

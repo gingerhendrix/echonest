@@ -15,5 +15,10 @@ module EchoNest
       AudioResult.parse request.fetch
     end
     
+    def get_blogs
+      request = ApiRequest.new("get_audio", {:id => id})
+      BlogResult.parse request.fetch
+    end
+    
   end
 end

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response version="3">
+  <status>
+    <code>0</code>
+    <message>Success</message>
+  </status>
+  <query>
+    <parameter name="api_key">5ZAOMB3BUR8QUN4PE</parameter>
+    <parameter name="id">music://id.echonest.com/~/AR/ARH6W4X1187B99274F</parameter>
+    <parameter name="start">0</parameter>
+    <parameter name="rows">2</parameter>
+  </query>
+  <artist>
+    <name>Radiohead</name>
+    <id>music://id.echonest.com/~/AR/ARH6W4X1187B99274F</id>
+    <foreign_id>music://id.echonest.com/5ZAOMB3BUR8QUN4PE/AR/1</foreign_id>
+  </artist>
+  <results found="131" shown="2" start="0">
+    <doc id="808bd8998c36ca73ee35c77453461b05" type="web">
+      <name>Radiohead live at Santa Barbara 28.8.08 « Misspeak Music</name>
+      <url>http://misspeakmusic.wordpress.com/2008/09/01/radiohead-live-at-santa-barbara-28808/</url>
+      <summary>[blog text removed]</summary>
+      <date_found>2008-10-14 16:38:15.582000</date_found>
+    </doc>
+    <doc id="20fc2d49343546ba647ddcae5c0e70e0" type="web">
+      <name>Apartment 41: Radiohead's Santa Barbara Webcast</name>
+      <url>http://coldbrains41.blogspot.com/2008/08/radioheads-santa-barbara-webcast-video.html</url>
+      <summary>[blog text removed]</summary>
+      <date_found>2008-10-14 16:38:15.582000</date_found>
+    </doc>
+  </results>
+</response>
