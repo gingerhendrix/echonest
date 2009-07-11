@@ -1,0 +1,12 @@
+
+module EchoNest
+  class <%=name.capitalize%>Result
+    include HappyMapper
+    
+    tag :response
+    
+    has_one :artist, Artist
+    has_one :results, <%=name.capitalize%>Results
+    
+  end
+end
