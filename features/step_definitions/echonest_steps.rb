@@ -71,3 +71,20 @@ Then /^I should get some hotttnesss results$/ do
 end
 
 
+When /^I retrieve the news for "([^\"]*)"$/ do |arg1|
+  @artist = Artist.new id
+  pending("Service unavailable") do
+    @news = @artist.get_news
+  end
+end
+
+Then /^I should get some news results$/ do
+  @news.should_not be_nil
+  @news.should be_kind_of(NewsResult)
+  @news.results.docs.should be_kind_of(Array)
+  @news.results.docs.length.should > 0
+  @news.results.docs[0].should be_kind_of(NewsDoc)
+  @news.results.docs[0].url.should_not be_nil
+end
+
+

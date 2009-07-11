@@ -5,7 +5,7 @@ describe "<%=name.capitalize%>Result" do
   describe "#parse" do
     
     before(:each) do
-      @xml =  File.read(File.dirname(__FILE__) + "/../fixtures/<%=name%>/wavves.xml")
+      @xml =  File.read(File.dirname(__FILE__) + "/../fixtures/<%=name%>/radiohead.xml")
     end
     
     it "should parse xml" do
@@ -15,13 +15,13 @@ describe "<%=name.capitalize%>Result" do
     it "should have artist" do
       <%=name%> = EchoNest::<%=name.capitalize%>Result.parse(@xml)
       <%=name%>.artist.should be_kind_of(EchoNest::Artist)
-      <%=name%>.artist.name.should == "Wavves"
-      <%=name%>.artist.id.should == "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"      
+      <%=name%>.artist.name.should == "Radiohead"
+      <%=name%>.artist.id.should == "music://id.echonest.com/~/AR/ARH6W4X1187B99274F"      
     end
     
     it "should have results" do
       <%=name%> = EchoNest::<%=name.capitalize%>Result.parse(@xml)
-      <%=name%>.results.should be_kind_of(EchoNest::BlogResults)
+      <%=name%>.results.should be_kind_of(EchoNest::<%=name.capitalize%>Results)
       #TODO: Fill in these values as found in fixture
       <%=name%>.results.found.should == "51"
       <%=name%>.results.shown.should == "15"
@@ -32,8 +32,8 @@ describe "<%=name.capitalize%>Result" do
     
     describe "result" do
       it "should be an <%=name.capitalize%>Doc" do
-        <%=name%> = EchoNest::AudioResult.parse(@xml)
-        doc = audio.results.docs[0]  
+        <%=name%> = EchoNest::<%=name.capitalize%>Result.parse(@xml)
+        doc = <%=name%>.results.docs[0]  
         doc.should be_kind_of(EchoNest::<%=name.capitalize%>Doc)
         #TODO: Create tests based on attributes in resource
       end

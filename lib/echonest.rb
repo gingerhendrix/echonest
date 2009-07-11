@@ -24,3 +24,8 @@ require "echonest/blog_results.rb"
 require "echonest/blog_result.rb"
 require "echonest/familiarity_result.rb"
 require "echonest/hotttnesss_result.rb"
+
+require "echonest/news_doc.rb"
+require "echonest/news_results.rb"
+require "echonest/news_result.rb"
+

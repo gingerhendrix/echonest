@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response version="3">
+  <status>
+    <code>0</code>
+    <message>Success</message>
+  </status>
+  <query>
+    <parameter name="api_key">5ZAOMB3BUR8QUN4PE</parameter>
+    <parameter name="id">music://id.echonest.com/~/AR/ARH6W4X1187B99274F</parameter>
+    <parameter name="start">0</parameter>
+    <parameter name="rows">2</parameter>
+  </query>
+  <artist>
+    <name>Radiohead</name>
+    <id>music://id.echonest.com/~/AR/ARH6W4X1187B99274F</id>
+    <foreign_id>music://id.echonest.com/5ZAOMB3BUR8QUN4PE/AR/1</foreign_id>
+  </artist>
+  <results found="67" shown="2" start="0">
+    <doc id="f43d70ef2692a56b9302a143adc68be0" type="web">
+      <name>Modeselektor supports Radiohead in Japan</name>
+      <url>http://www.residentadvisor.net/news.aspx?id=9632</url>
+      <summary>[news text removed]</summary>
+      <date_found>2008-11-26 21:19:35.356000</date_found>
+    </doc>
+    <doc id="0023ab6baeb5952faf3dc31818804752" type="web">
+      <name>Radiohead webcasting final show of U.S. tour tonight (Santa Barbara Bowl)</name>
+      <url>http://prefixmag.com/news/radiohead-webcasting-final-show-tour-santa-barbara/21104/</url>
+      <summary>news text removed</summary>
+      <date_found>2008-11-26 21:19:35.356000</date_found>
+    </doc>
+  </results>
+</response>

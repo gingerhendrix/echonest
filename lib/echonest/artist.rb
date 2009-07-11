@@ -31,6 +31,11 @@ module EchoNest
       request = ApiRequest.new("get_hotttnesss", {:id => id})
       HotttnesssResult.parse request.fetch
     end
+    
+    def get_news
+      request = ApiRequest.new("get_news", {:id => id})
+      NewsResult.parse request.fetch
+    end
 
   end
 end
