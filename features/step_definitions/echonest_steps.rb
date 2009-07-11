@@ -58,3 +58,16 @@ Then /^I should get some familiarity results$/ do
   @familiarity.artist.familiarity.should be_kind_of(Float)
 end
 
+When /^I retrieve the hotttnesss for "([^\"]*)"$/ do |id|
+  @artist = Artist.new id
+  @hotttnesss = @artist.get_hotttnesss
+end
+
+Then /^I should get some hotttnesss results$/ do
+  @hotttnesss.should_not be_nil
+  @hotttnesss.should be_kind_of(HotttnesssResult)
+  @hotttnesss.artist.hotttnesss.should_not be_nil
+  @hotttnesss.artist.hotttnesss.should be_kind_of(Float)
+end
+
+

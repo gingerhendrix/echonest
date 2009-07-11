@@ -10,7 +10,8 @@ module EchoNest
     element :name, String
     element :id, String
     element :familiarity, Float
-    
+    element :hotttnesss, Float
+      
     def get_audio
       request = ApiRequest.new("get_audio", {:id => id})
       AudioResult.parse request.fetch
@@ -23,10 +24,13 @@ module EchoNest
     
     def get_familiarity
       request = ApiRequest.new("get_familiarity", {:id => id})
-      result = request.fetch
-      puts result
-      FamiliarityResult.parse result
+      FamiliarityResult.parse request.fetch
     end
     
+    def get_hotttnesss
+      request = ApiRequest.new("get_hotttnesss", {:id => id})
+      HotttnesssResult.parse request.fetch
+    end
+
   end
 end

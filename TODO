@@ -27,7 +27,12 @@
     Create fixture +done
     Write unit tests +done
     Write model +done
-  get_hottness
+  @iteration get_hottness +done
+    Run resource generator +done
+    Write acceptance tests +done
+    Create fixture +done
+    Write unit tests +done
+    Write model +done
   get_news
   get_profile
   get_reviews
