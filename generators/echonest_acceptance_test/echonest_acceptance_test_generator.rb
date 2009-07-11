@@ -1,4 +1,4 @@
-class EchonestResourceGenerator < RubiGen::Base
+class EchonestAcceptanceTestGenerator < RubiGen::Base
 
   default_options :author => nil
 

@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_generator_helper.rb")
 
 
-class TestEchonestResourceGenerator < Test::Unit::TestCase
+class TestEchonestAcceptanceTestGenerator < Test::Unit::TestCase
   include RubiGen::GeneratorTestHelper
 
   def setup
@@ -28,7 +28,7 @@ class TestEchonestResourceGenerator < Test::Unit::TestCase
 
   def test_generator_without_options
     name = "blah"
-    run_generator('echonest_resource', [name], sources)
+    run_generator('echonest_acceptance_test', [name], sources)
     assert_directory_exists "features/"
     assert_generated_file   "features/artist_#{name}.feature" do |feature|
      assert feature.include?("Feature: Artist #{name}") 
@@ -37,7 +37,7 @@ class TestEchonestResourceGenerator < Test::Unit::TestCase
      assert feature.include?("Scenario: Artist #{name}")
      assert feature.include?("Then I should get some #{name} results")
     end
-    
+   
   end
 
   private
