@@ -1,6 +1,6 @@
 
 module EchoNest
-  class Audio
+  class AudioResult
     include HappyMapper
     
     tag :response

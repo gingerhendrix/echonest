@@ -18,5 +18,5 @@ require "echonest/artist.rb"
 require "echonest/artist_search.rb"
 require "echonest/audio_doc.rb"
 require "echonest/audio_results.rb"
-require "echonest/audio.rb"
+require "echonest/audio_result.rb"
 

@@ -12,7 +12,7 @@ module EchoNest
     
     def get_audio
       request = ApiRequest.new("get_audio", {:id => id})
-      Audio.parse request.fetch
+      AudioResult.parse request.fetch
     end
     
   end

@@ -9,18 +9,18 @@ describe "Audio" do
     end
     
     it "should parse xml" do
-      EchoNest::Audio.parse(@xml)
+      EchoNest::AudioResult.parse(@xml)
     end
     
     it "should have artist" do
-      audio = EchoNest::Audio.parse(@xml)
+      audio = EchoNest::AudioResult.parse(@xml)
       audio.artist.should be_kind_of(EchoNest::Artist)
       audio.artist.name.should == "Wavves"
       audio.artist.id.should == "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"      
     end
     
     it "should have results" do
-      audio = EchoNest::Audio.parse(@xml)
+      audio = EchoNest::AudioResult.parse(@xml)
       audio.results.should be_kind_of(EchoNest::AudioResults)
       audio.results.found.should == "51"
       audio.results.shown.should == "15"
@@ -31,7 +31,7 @@ describe "Audio" do
     
     describe "result" do
       it "should be an AudioDoc" do
-        audio = EchoNest::Audio.parse(@xml)
+        audio = EchoNest::AudioResult.parse(@xml)
         doc = audio.results.docs[0]  
         doc.should be_kind_of(EchoNest::AudioDoc)
         doc.artist_id.should == "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"
