@@ -29,3 +29,5 @@ require "echonest/news_doc.rb"
 require "echonest/news_results.rb"
 require "echonest/news_result.rb"
 
+require "echonest/profile_result.rb"
+

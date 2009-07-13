@@ -39,7 +39,12 @@
     Create fixture +done
     Write unit tests +done
     Write model +done
-  get_profile
+  @iteration get_profile +done
+    Run resource generator +done
+    Write acceptance tests +done
+    Create fixture +done
+    Write unit tests +done
+    Write model +done
   get_reviews
   get_similar
   get_top_terms

@@ -87,4 +87,17 @@ Then /^I should get some news results$/ do
   @news.results.docs[0].url.should_not be_nil
 end
 
+When /^I retrieve the profile for "([^\"]*)"$/ do |id|
+  @artist = Artist.new id
+  @profile = @artist.get_profile
+end
+
+Then /^I should get some profile results$/ do
+  @profile.should_not be_nil
+  @profile.should be_kind_of(ProfileResult)
+  @profile.artist.should_not be_nil
+  @profile.artist.name.should_not be_nil
+  @profile.artist.id.should_not be_nil
+end
+
 
