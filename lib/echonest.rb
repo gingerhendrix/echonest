@@ -31,3 +31,7 @@ require "echonest/news_result.rb"
 
 require "echonest/profile_result.rb"
 
+require "echonest/reviews_doc.rb"
+require "echonest/reviews_results.rb"
+require "echonest/reviews_result.rb"
+

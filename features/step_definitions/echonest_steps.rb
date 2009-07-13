@@ -100,4 +100,18 @@ Then /^I should get some profile results$/ do
   @profile.artist.id.should_not be_nil
 end
 
+When /^I retrieve the reviews for "([^\"]*)"$/ do |id|
+  @artist = Artist.new id
+  @reviews = @artist.get_reviews
+end
+
+Then /^I should get some reviews results$/ do
+  @news.should_not be_nil
+  @news.should be_kind_of(ReviewsResult)
+  @news.results.docs.should be_kind_of(Array)
+  @news.results.docs.length.should > 0
+  @news.results.docs[0].should be_kind_of(ReviewsDoc)
+  @news.results.docs[0].url.should_not be_nil
+end
+
 
