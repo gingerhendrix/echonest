@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response version="3">
+  <status>
+    <code>0</code>
+    <message>Success</message>
+  </status>
+  <query>
+    <parameter name="api_key">5ZAOMB3BUR8QUN4PE</parameter>
+    <parameter name="id">music://id.echonest.com/~/AR/ARH6W4X1187B99274F</parameter>
+    <parameter name="id">music://id.echonest.com/~/AR/AR2UWUD1187B9B3B01</parameter>
+    <parameter name="start">0</parameter>
+    <parameter name="rows">3</parameter>
+  </query>
+  <similar>
+    <artist>
+      <id>music://id.echonest.com/~/AR/ARKG7TE1187B9A45D8</id>
+      <name>Dinah Washington</name>
+      <rank>1</rank>
+    </artist>
+    <artist>
+      <id>music://id.echonest.com/~/AR/AR7BGWD1187FB59CCB</id>
+      <name>music://id.echonest.com/~/AR/Aretha Franklin</name>
+      <rank>2</rank>
+    </artist>
+    <artist>
+      <id>music://id.echonest.com/~/AR/AREQIT21187B9AEB7F</id>
+      <name>Dusty Springfield</name>
+      <rank>3</rank>
+    </artist>
+  </similar>
+</response>

@@ -114,4 +114,19 @@ Then /^I should get some reviews results$/ do
   @news.results.docs[0].url.should_not be_nil
 end
 
+When /^I retrieve the similar for "([^\"]*)"$/ do |id|
+  @artist = Artist.new id
+  @similar = @artist.get_similar
+end
+
+Then /^I should get some similar results$/ do
+  @similar.should_not be_nil
+  @similar.should be_kind_of(SimilarResult)
+  @similar.results.docs.should be_kind_of(Array)
+  @similar.results.docs.length.should > 0
+  @similar.results.docs[0].should be_kind_of(SimilarDoc)
+  @similar.results.docs[0].name.should_not be_nil
+  @similar.results.docs[0].id.should_not be_nil
+end
+
 

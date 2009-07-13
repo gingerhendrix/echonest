@@ -43,5 +43,10 @@ module EchoNest
       ProfileResult.parse request.fetch
     end
 
+    def get_similar
+      request = ApiRequest.new("get_similar", {:id => id})
+      SimilarResult.parse request.fetch
+    end
+
   end
 end
