@@ -146,4 +146,18 @@ Then /^I should get some urls results$/ do
   @urls.artist.itunes_url.should_not be_nil
 end
 
+When /^I retrieve the videos for "([^\"]*)"$/ do |id|
+  @artist = Artist.new id
+  @videos = @artist.get_video
+end
+
+Then /^I should get some video results$/ do
+  @videos.should_not be_nil
+  @videos.should be_kind_of(VideoResult)
+  @videos.results.docs.should be_kind_of(Array)
+  @videos.results.docs.length.should > 0
+  @videos.results.docs[0].should be_kind_of(VideoDoc)
+  @videos.results.docs[0].url.should_not be_nil
+end
+
 

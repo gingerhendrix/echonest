@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response version="3">
+  <status>
+    <code>0</code>
+    <message>Success</message>
+  </status>
+  <query>
+    <parameter name="api_key">5ZAOMB3BUR8QUN4PE</parameter>
+    <parameter name="name">music://id.echonest.com/~/AR/ARH6W4X1187B99274F</parameter>
+    <parameter name="start">0</parameter>
+    <parameter name="rows">2</parameter>
+  </query>
+  <artist>
+    <name>Radiohead</name>
+    <id>music://id.echonest.com/~/AR/ARH6W4X1187B99274F</id>
+  </artist>
+  <results found="88" shown="2" start="0">
+    <doc id="1bbd537e754abd3b82210b70eb2767ca" type="video">
+      <site>youtube</site>
+      <title>Radiohead- Tell Me Why- Live Hollywood Bowl Neil Young 8-25</title>
+      <url>http://youtube.com/watch?v=kHIJcx9EB94</url>
+      <date_found>2008-11-02 16:32:27.001000</date_found>
+    </doc>
+    <doc id="63f31317e85bec3809a82bfc969c3337" type="video">
+      <site>myspace</site>
+      <title>Karma Police - Radiohead</title>
+      <url>http://vids.myspace.com/index.cfm?fuseaction=vids.individual&amp;videoid=4938205</url>
+      <date_found>2008-11-02 16:32:27.001000</date_found>
+      <image_url>http://b2.ac-images.myspacecdn.com/01657/29/07/1657067092_thumb1.jpg</image_url>
+    </doc>
+  </results>
+</response>

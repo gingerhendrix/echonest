@@ -63,4 +63,9 @@
     Create fixture +done
     Write unit tests +done
     Write model +done
-  get_video
+  @iteration get_video +done
+    Run resource generator +done
+    Write acceptance tests +done
+    Create fixture +done
+    Write unit tests +done
+    Write model +done

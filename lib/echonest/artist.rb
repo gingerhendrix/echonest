@@ -60,6 +60,11 @@ module EchoNest
       request = ApiRequest.new("get_urls", {:id => id})
       UrlsResult.parse request.fetch
     end
+    
+    def get_video
+      request = ApiRequest.new("get_video", {:id => id})
+      VideoResult.parse request.fetch
+    end
 
   end
 end

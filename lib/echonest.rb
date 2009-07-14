@@ -40,3 +40,7 @@ require "echonest/similar_results.rb"
 require "echonest/similar_result.rb"
 
 require "echonest/urls_result.rb"
+
+require "echonest/video_doc.rb"
+require "echonest/video_results.rb"
+require "echonest/video_result.rb"
