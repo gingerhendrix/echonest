@@ -1,71 +1,17 @@
-@milestone Basic artist methods
+@milestone Basic artist methods +done
   @iteration Artist Search +done
   @iteration get_audio +done
-    acceptance test +done
-    unit tests +done
-    implementation +done
   @iteration write_generator +done
-    Write get_blogs and extract into generator +done
-      acceptance test +done
-        write +done
-        add to generator test +done
-        add to generator +done
-        extract into template +done
-      unit tests +done
-        write +done
-        add to generator test +done
-        add to generator +done
-        extract into template +done
-      model +done
-        write +done
-        add to generator test +done
-        add to generator +done
-        extract into template +done
-  @iteration  get_familiarity +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
+  @iteration get_familiarity +done
   @iteration get_hottness +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
   @iteration get_news +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
   @iteration get_profile +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
   @iteration get_reviews +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
   @iteration get_similar +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
   @iteration get_urls +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
   @iteration get_video +done
-    Run resource generator +done
-    Write acceptance tests +done
-    Create fixture +done
-    Write unit tests +done
-    Write model +done
+  @iteration prepare for release +done
+    Increment version number +done
+    Add to history +done
+    Generate gemspec +done
+    Tag and Push +done
