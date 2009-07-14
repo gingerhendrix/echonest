@@ -12,6 +12,14 @@ module EchoNest
     element :familiarity, Float
     element :hotttnesss, Float
     element :foreign_id, String
+    
+    element :mb_url, String
+    element :official_url, String
+    element :myspace_url, String
+    element :wikipedia_url, String
+    element :amazon_url, String
+    element :itunes_url, String
+    
       
     def get_audio
       request = ApiRequest.new("get_audio", {:id => id})
@@ -46,6 +54,11 @@ module EchoNest
     def get_similar
       request = ApiRequest.new("get_similar", {:id => id})
       SimilarResult.parse request.fetch
+    end
+    
+    def get_urls
+      request = ApiRequest.new("get_urls", {:id => id})
+      UrlsResult.parse request.fetch
     end
 
   end

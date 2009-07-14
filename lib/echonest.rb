@@ -38,3 +38,5 @@ require "echonest/reviews_result.rb"
 require "echonest/similar_doc.rb"
 require "echonest/similar_results.rb"
 require "echonest/similar_result.rb"
+
+require "echonest/urls_result.rb"

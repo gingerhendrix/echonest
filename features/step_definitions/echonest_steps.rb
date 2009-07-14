@@ -130,3 +130,20 @@ Then /^I should get some similar results$/ do
 end
 
 
+When /^I retrieve the urls for "([^\"]*)"$/ do |id|
+  @artist = Artist.new id
+  @urls = @artist.get_urls
+end
+
+Then /^I should get some urls results$/ do
+  @urls.should_not be_nil
+  @urls.should be_kind_of(UrlsResult)
+  @urls.artist.should_not be_nil
+  @urls.artist.name.should_not be_nil
+  @urls.artist.id.should_not be_nil
+  @urls.artist.mb_url.should_not be_nil
+  @urls.artist.amazon_url.should_not be_nil
+  @urls.artist.itunes_url.should_not be_nil
+end
+
+
