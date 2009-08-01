@@ -7,7 +7,7 @@ module EchoNest
     
 #    has_one :status, RequestStatus
 #    has_one :query, RequestQuery
-    has_many :artists, Artist
+    has_many :artists, Xml::ArtistDoc
   
     def self.search(query)
       request = ApiRequest.new("search_artists", {:query => query})

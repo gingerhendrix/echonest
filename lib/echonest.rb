@@ -15,9 +15,9 @@ end
 
 require "echonest/api_request.rb"
 require "echonest/artist.rb"
-require "echonest/artist_search.rb"
-
 require "echonest/xml/artist_doc.rb"
+
+require "echonest/artist_search.rb"
 
 require "echonest/xml/audio_doc.rb"
 require "echonest/xml/audio_results.rb"

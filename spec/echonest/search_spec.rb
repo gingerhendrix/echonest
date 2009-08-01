@@ -41,7 +41,7 @@ describe "ArtistSearch" do
     it "should have list of artists" do
       search = EchoNest::ArtistSearch.parse(@xml)
       search.artists.should be_kind_of(Array)
-      search.artists[0].should be_kind_of(EchoNest::Artist)
+      search.artists[0].should be_kind_of(EchoNest::Xml::ArtistDoc)
       search.artists[0].name.should == "Wavves"
       search.artists[0].id.should == "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"      
     end

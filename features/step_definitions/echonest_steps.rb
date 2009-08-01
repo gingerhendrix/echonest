@@ -1,5 +1,6 @@
 
 include EchoNest
+include EchoNest::Xml
 
 When /^I search for "([^\"]*)"$/ do |query|
   @search = ArtistSearch.search query
@@ -12,7 +13,7 @@ end
 
 Then /^the top result should have id "([^\"]*)"$/ do |id|
    @search.artists[0].should_not be_nil
-   @search.artists[0].should be_kind_of(Artist)
+   @search.artists[0].should be_kind_of(ArtistDoc)
    @search.artists[0].id.should == id
 end
 
@@ -101,8 +102,10 @@ Then /^I should get some profile results$/ do
 end
 
 When /^I retrieve the reviews for "([^\"]*)"$/ do |id|
-  @artist = Artist.new id
-  @reviews = @artist.get_reviews
+  pending("Service Unavailable") do
+    @artist = Artist.new id
+    @reviews = @artist.get_reviews
+  end
 end
 
 Then /^I should get some reviews results$/ do
