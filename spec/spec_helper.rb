@@ -11,3 +11,5 @@ require 'echonest'
 Spec::Runner.configure do |config|
   
 end
+
+include EchoNest::Xml

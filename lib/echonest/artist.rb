@@ -6,20 +6,6 @@ module EchoNest
     def initialize(id=nil)
       @id = id if id
     end
-    
-    element :name, String
-    element :id, String
-    element :familiarity, Float
-    element :hotttnesss, Float
-    element :foreign_id, String
-    
-    element :mb_url, String
-    element :official_url, String
-    element :myspace_url, String
-    element :wikipedia_url, String
-    element :amazon_url, String
-    element :itunes_url, String
-    
       
     def get_audio
       request = ApiRequest.new("get_audio", {:id => id})

@@ -16,31 +16,37 @@ end
 require "echonest/api_request.rb"
 require "echonest/artist.rb"
 require "echonest/artist_search.rb"
-require "echonest/audio_doc.rb"
-require "echonest/audio_results.rb"
-require "echonest/audio_result.rb"
-require "echonest/blog_doc.rb"
-require "echonest/blog_results.rb"
-require "echonest/blog_result.rb"
-require "echonest/familiarity_result.rb"
-require "echonest/hotttnesss_result.rb"
 
-require "echonest/news_doc.rb"
-require "echonest/news_results.rb"
-require "echonest/news_result.rb"
+require "echonest/xml/artist_doc.rb"
 
-require "echonest/profile_result.rb"
+require "echonest/xml/audio_doc.rb"
+require "echonest/xml/audio_results.rb"
+require "echonest/xml/audio_result.rb"
 
-require "echonest/reviews_doc.rb"
-require "echonest/reviews_results.rb"
-require "echonest/reviews_result.rb"
+require "echonest/xml/blog_doc.rb"
+require "echonest/xml/blog_results.rb"
+require "echonest/xml/blog_result.rb"
 
-require "echonest/similar_doc.rb"
-require "echonest/similar_results.rb"
-require "echonest/similar_result.rb"
+require "echonest/xml/familiarity_result.rb"
 
-require "echonest/urls_result.rb"
+require "echonest/xml/hotttnesss_result.rb"
 
-require "echonest/video_doc.rb"
-require "echonest/video_results.rb"
-require "echonest/video_result.rb"
+require "echonest/xml/news_doc.rb"
+require "echonest/xml/news_results.rb"
+require "echonest/xml/news_result.rb"
+
+require "echonest/xml/profile_result.rb"
+
+require "echonest/xml/reviews_doc.rb"
+require "echonest/xml/reviews_results.rb"
+require "echonest/xml/reviews_result.rb"
+
+require "echonest/xml/similar_doc.rb"
+require "echonest/xml/similar_results.rb"
+require "echonest/xml/similar_result.rb"
+
+require "echonest/xml/urls_result.rb"
+
+require "echonest/xml/video_doc.rb"
+require "echonest/xml/video_results.rb"
+require "echonest/xml/video_result.rb"
