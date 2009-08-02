@@ -1,7 +1,6 @@
 @milestone Basic artist methods +done
 @milestone Improve API, documentation and implement missing features
-  @iteration Fluent Api
-    Separate out the ugly xml mapping classes and provide a nice fluent interface based on an Artist object eg. anArtist.familiarity should return the familiarity as a number (transparently calling the webservice if required)
+  @iteration Fluent Api +done
   @iteration Paging
     Create a nice interface for paged results (urls, videos, blogs, audio etc).
   @iteration Docs

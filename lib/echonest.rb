@@ -2,6 +2,7 @@
 require 'happymapper'
 require 'open-uri'
 require 'activesupport'
+require 'delegate'
 
 module EchoNest
    def self.api_key=(api_key)
@@ -15,6 +16,8 @@ module EchoNest
 end
 
 require "echonest/api_request.rb"
+require "echonest/paged_result.rb"
+
 require "echonest/artist.rb"
 require "echonest/xml/artist_doc.rb"
 

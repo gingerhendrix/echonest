@@ -16,6 +16,20 @@ Then /^I should get some results$/ do
    @result.length.should_not == 0
 end
 
+Then /^I should get some paged results$/ do
+   @result.should_not be_nil
+   @result.should be_kind_of(PagedResult)
+   @result.length.should_not == 0
+   @result.found.should_not == 0
+end
+
+Then /^a later result should have a ([^ ]*)$/ do |prop|
+   @later_result ||=  @result[@result.length+1]
+   @later_result.send(prop.to_sym).should_not be_nil
+end
+
+
+
 Then /^I should get a numeric result$/ do
    @result.should_not be_nil
    @result.should be_kind_of(Numeric)

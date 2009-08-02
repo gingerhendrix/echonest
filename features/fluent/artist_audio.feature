@@ -4,8 +4,10 @@ Feature: Artist audio
 
   Scenario: Artist audio
     When I retrieve the audio for "music://id.echonest.com/~/AR/ARVVZQP11E2835DBCB"
-    Then I should get some results
+    Then I should get some paged results
     And a result should have a url
     And a result should have a link
     And a result should have a release
     And a result should have a title
+    And a later result should have a url
+    

@@ -18,7 +18,11 @@ module EchoNest
         define_method name do
           return instance_variable_get("@#{name.to_s}") if instance_variable_get("@#{name.to_s}")
           result = self.send("get_#{name.to_s}")
-          instance_variable_set("@#{name.to_s}", result.results.docs)
+          pager = Proc.new { |start, rows| 
+            self.send("get_#{name.to_s}", :start => start, :rows => rows).results
+          }
+          page = PagedResult.new result.results, pager 
+          instance_variable_set("@#{name.to_s}",  page)
         end
       else
         if !options[:provides]
