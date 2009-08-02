@@ -4,6 +4,6 @@ Feature: Artist search
 
   Scenario: Artist search
     When I search for "Wavves"
-    Then I should get some results
+    Then I should get some unpaged results
     And a result should have a id
     And a result should have a name

@@ -1,8 +1,17 @@
 @milestone Basic artist methods +done
 @milestone Improve API, documentation and implement missing features
   @iteration Fluent Api +done
-  @iteration Paging
-    Create a nice interface for paged results (urls, videos, blogs, audio etc).
+  @iteration Paging +done 
+    Create a nice interface for paged results (urls, videos, blogs, audio etc). +done
   @iteration Docs
     README
     Website    
+@milestone improvements
+  PagedResult could be better
+    next_page should return array-alike 'Page'
+    next_page should accept arguments (pageNumber, start, pageSize)
+    PagedResult should have available method detailing available indices
+  Better error handling
+    should have custom exception types for echonest errors eg. InvalidApiKey
+@milestone remix api
+  Should support the remix api

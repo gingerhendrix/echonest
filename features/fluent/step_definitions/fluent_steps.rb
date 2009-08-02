@@ -10,7 +10,12 @@ When /^I retrieve the ([^ ]*) for "([^\"]*)"$/ do |prop, artist|
   end
 end
 
+
 Then /^I should get some results$/ do
+  Then "I should get some paged results"
+end
+
+Then /^I should get some unpaged results$/ do
    @result.should_not be_nil
    @result.should be_kind_of(Array)
    @result.length.should_not == 0
@@ -28,7 +33,9 @@ Then /^a later result should have a ([^ ]*)$/ do |prop|
    @later_result.send(prop.to_sym).should_not be_nil
 end
 
-
+Then /^a later result should not have the same url as the first url$/ do
+  @later_result.url.should_not == @result[0].url
+end
 
 Then /^I should get a numeric result$/ do
    @result.should_not be_nil

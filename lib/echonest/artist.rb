@@ -9,8 +9,10 @@ module EchoNest
     
     def self.service(name, options = {})
     
-      define_method "get_#{name.to_s}" do
-        request = ApiRequest.new("get_#{name.to_s}", {:id => id})
+      define_method "get_#{name.to_s}" do |*args|
+        options = args[0] if args.length == 1
+        options = {:id => id}.merge(options)
+        request = ApiRequest.new("get_#{name.to_s}", options)
         "Xml::#{name.to_s.titleize}Result".constantize.parse request.fetch
       end
 
@@ -49,9 +51,11 @@ module EchoNest
       end    
     end
     
-    def self.find(query)
-      request = ApiRequest.new("search_artists", {:query => query})
-      Xml::ArtistSearchResults.parse(request.fetch).artists
+    def self.find(query, options={})
+      options = {:query => query}.merge(options)
+      request = ApiRequest.new("search_artists", options)
+      results = Xml::ArtistSearchResults.parse(request.fetch)
+      results.artists
     end
     
     service :audio

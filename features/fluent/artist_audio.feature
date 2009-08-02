@@ -10,4 +10,4 @@ Feature: Artist audio
     And a result should have a release
     And a result should have a title
     And a later result should have a url
-    
+    And a later result should not have the same url as the first url

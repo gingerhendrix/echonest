@@ -4,10 +4,11 @@
 module EchoNest
   class PagedResult < DelegateClass(Array)
 
-    def initialize(results, block)
+    def initialize(results, block, options={})
       @results = results
       @update = block
-      @available = @results.docs
+      @page_name = options[:page] || :docs 
+      @available = @results.send(@page_name)
       super(@available)
     end
 
@@ -17,7 +18,7 @@ module EchoNest
 
     def next_page
       results = @update.call @available.length, 15
-      @available += results.docs
+      @available += results.send(@page_name)
       self.__setobj__(@available)
     end
 
