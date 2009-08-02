@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../../spec_helper'
 
-describe "BlogResult" do
+describe "BlogsResult" do
 
   describe "#parse" do
     
@@ -9,19 +9,19 @@ describe "BlogResult" do
     end
     
     it "should parse xml" do
-      BlogResult.parse(@xml)
+      BlogsResult.parse(@xml)
     end
     
     it "should have artist" do
-      blog = BlogResult.parse(@xml)
+      blog = BlogsResult.parse(@xml)
       blog.artist.should be_kind_of(ArtistDoc)
       blog.artist.name.should == "Radiohead"
       blog.artist.id.should == "music://id.echonest.com/~/AR/ARH6W4X1187B99274F"      
     end
     
     it "should have results" do
-      blog = BlogResult.parse(@xml)
-      blog.results.should be_kind_of(BlogResults)
+      blog = BlogsResult.parse(@xml)
+      blog.results.should be_kind_of(BlogsResults)
       #TODO: Fill in these values as found in fixture
       blog.results.found.should == "131"
       blog.results.shown.should == "2"
@@ -32,9 +32,9 @@ describe "BlogResult" do
     
     describe "result" do
       it "should be an BlogDoc" do
-        blog = BlogResult.parse(@xml)
+        blog = BlogsResult.parse(@xml)
         doc = blog.results.docs[0]  
-        doc.should be_kind_of(BlogDoc)
+        doc.should be_kind_of(BlogsDoc)
         #TODO: Create tests based on attributes in resource
         doc.name.should == "Radiohead live at Santa Barbara 28.8.08 « Misspeak Music"
         doc.url.should == "http://misspeakmusic.wordpress.com/2008/09/01/radiohead-live-at-santa-barbara-28808/"

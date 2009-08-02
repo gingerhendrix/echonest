@@ -1,63 +1,66 @@
 
 module EchoNest
   class Artist
-    include HappyMapper
-    
     attr_accessor :id
     
     def initialize(id=nil)
       @id = id if id
     end
-      
-    def get_audio
-      request = ApiRequest.new("get_audio", {:id => id})
-      Xml::AudioResult.parse request.fetch
-    end
     
-    def get_blogs
-      request = ApiRequest.new("get_audio", {:id => id})
-      Xml::BlogResult.parse request.fetch
-    end
+    def self.service(name, options = {})
     
-    def get_familiarity
-      request = ApiRequest.new("get_familiarity", {:id => id})
-      Xml::FamiliarityResult.parse request.fetch
-    end
-    
-    def get_hotttnesss
-      request = ApiRequest.new("get_hotttnesss", {:id => id})
-      Xml::HotttnesssResult.parse request.fetch
-    end
-    
-    def get_news
-      request = ApiRequest.new("get_news", {:id => id})
-      Xml::NewsResult.parse request.fetch
-    end
+      define_method "get_#{name.to_s}" do
+        request = ApiRequest.new("get_#{name.to_s}", {:id => id})
+        "Xml::#{name.to_s.titleize}Result".constantize.parse request.fetch
+      end
 
-    def get_profile
-      request = ApiRequest.new("get_profile", {:id => id})
-      Xml::ProfileResult.parse request.fetch
-    end
+      if !options[:singular]
+        define_method name do
+          return instance_variable_get("@#{name.to_s}") if instance_variable_get("@#{name.to_s}")
+          result = self.send("get_#{name.to_s}")
+          instance_variable_set("@#{name.to_s}", result.results.docs)
+        end
+      else
+        if !options[:provides]
+          define_method name do
+            return instance_variable_get("@#{name.to_s}") if instance_variable_get("@#{name.to_s}")
+            result = self.send("get_#{name.to_s}")
+            instance_variable_set("@#{name.to_s}", result.artist.send(name))
+          end
+        else
 
-    def get_similar
-      request = ApiRequest.new("get_similar", {:id => id})
-      Xml::SimilarResult.parse request.fetch
-    end
-    
-    def get_reviews
-      request = ApiRequest.new("get_reviews", {:id => id})
-      Xml::ReviewsResult.parse request.fetch
-    end
-    
-    def get_urls
-      request = ApiRequest.new("get_urls", {:id => id})
-      Xml::UrlsResult.parse request.fetch
-    end
-    
-    def get_video
-      request = ApiRequest.new("get_video", {:id => id})
-      Xml::VideoResult.parse request.fetch
-    end
+          define_method name do
+            return instance_variable_get("@#{name.to_s}") if instance_variable_get("@#{name.to_s}")
+            result = self.send("get_#{name.to_s}")
+            instance_variable_set("@#{name.to_s}", result.artist)
+          end
 
+          options[:provides].each do |prop|
+            define_method prop do
+              return instance_variable_get("@#{prop.to_s}") if instance_variable_get("@#{prop.to_s}")
+              instance_variable_set("@#{prop.to_s}",  self.send(name).send(prop))
+            end
+          end
+        end
+      end    
+    end
+    
+    def self.find(query)
+      request = ApiRequest.new("search_artists", {:query => query})
+      Xml::ArtistSearchResults.parse(request.fetch).artists
+    end
+    
+    service :audio
+    service :blogs
+    service :familiarity, :singular => true
+    service :hotttnesss, :singular => true
+    service :news
+    service :profile, :singular => true, :provides => [:id, :name, :foreign_id]
+    service :reviews
+    service :similar
+    service :urls, :singular => true, :provides => [:mb_url, :official_url, :myspace_url, :wikipedia_url,  :amazon_url, :itunes_url]
+    service :video
+    
+ 
   end
 end

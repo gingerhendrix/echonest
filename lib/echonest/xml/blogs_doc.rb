@@ -1,7 +1,7 @@
 
 module EchoNest
   module Xml
-    class BlogDoc
+    class BlogsDoc
       include HappyMapper
       
       tag :doc

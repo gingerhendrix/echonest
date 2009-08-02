@@ -1,7 +1,7 @@
 
 module EchoNest
   module Xml
-    class BlogResults
+    class BlogsResults
       include HappyMapper
      
       tag :results
@@ -10,7 +10,7 @@ module EchoNest
       attribute :shown, String    
       attribute :start, String
       
-      has_many :docs, BlogDoc    
+      has_many :docs, BlogsDoc    
       
     end
   end
